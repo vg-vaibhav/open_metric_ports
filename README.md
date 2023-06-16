@@ -1,12 +1,29 @@
 # Open Metrics Port Scanner
 
-# Scans for open ports for Prometheus/Micrometer metrics
+# Scans for open ports to be used for [Prometheus HTTP Service Discovery](https://prometheus.io/docs/prometheus/latest/http_sd/)
 
 ## How to run
 
 ```
 go build
 ./open_metric_ports <host_address> <start_port_range> <end_port_range>
+```
+
+## HTTP Response
+
+```
+curl localhost:8888/hosts
+```
+
+```
+{
+  "targets": [
+    "hostname.com:36036",
+    "hostname.com:36018",
+    "hostname.com:36006"
+  ],
+  "labels": { "key": "value" }
+}
 ```
 
 ## TODO:

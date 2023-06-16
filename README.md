@@ -1,4 +1,4 @@
-# Open Metrics Port Scanner
+# Open Metric Ports Scanner
 
 # Scans for open ports to be used for [Prometheus HTTP Service Discovery](https://prometheus.io/docs/prometheus/latest/http_sd/)
 
